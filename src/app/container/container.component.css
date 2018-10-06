@@ -4,14 +4,24 @@ div#crypto-container {
     margin: 0 auto 4px auto;
     padding: 1em;
     box-shadow: 1px 1px 0 lightgrey;
-    padding-bottom: 100px;
-    padding-top: 55px;
 }
-  
-span.left {
+span.coin-name {
+    float: left;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+span.seperator {
+    margin-top: 10px;
+}
+span.coin-price {
+    float: right;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
     font-weight: bold;
 }
-  
-span.right {
-    float:right;
+img.coin-img {
+    width: 35px;
+    height: 35px;
 }

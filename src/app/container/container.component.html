@@ -1,6 +1,35 @@
 <div *ngIf="cryptos">
   <div id="crypto-container" *ngFor="let crypto of objectKeys(cryptos)">
-    <span class="left">{{ crypto }}</span>
-    <span class="right">{{ cryptos[crypto].USD | currency:'USD':true }}</span>
+    <img class="coin-img" src="{{ coinIcons[crypto] }}" alt="{{ crypto }}" />
+    <span class="coin-name">{{ crypto }}</span>
+    <span class="coin-price">{{ cryptos[crypto].USD | currency:'USD':true }}</span>
   </div>
 </div>
+
+<!-- <View style={container}>
+
+    <View style={upperRow}>
+        <Image
+            style={styles.image}
+            source={{ uri: images[symbol] }}
+        />
+        <Text style={coinSymbol}>{symbol}</Text>
+        <Text style={seperator}>|</Text>
+        <Text style={coinName}>{coin_name}</Text>
+        <Text style={coinPrice}>{price_usd}
+            <Text style={moneySymbol}> $ </Text>
+        </Text>
+    </View>
+
+    <View style={statisticsContainer}>
+
+        <Text>24h:
+             <Text style={percent_change_24h < 0 ? percentChangeMinus : percentChangePlus }> {percent_change_24h} % </Text>
+        </Text>
+        <Text>7d:
+            <Text style={percent_change_7d < 0 ? percentChangeMinus : percentChangePlus }> {percent_change_7d} % </Text>
+        </Text>
+
+    </View>
+
+</View> -->

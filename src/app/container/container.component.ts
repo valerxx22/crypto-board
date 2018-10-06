@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CryptoDataService } from '../crypto-data.service';
 
+import * as Constants from '../../utils/constants';
+
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
@@ -9,6 +11,7 @@ import { CryptoDataService } from '../crypto-data.service';
 export class ContainerComponent implements OnInit {
   objectKeys = Object.keys;
   cryptos: any;
+  coinIcons = Constants.COIN_ICONS;
 
   constructor(private _data: CryptoDataService) {
     
@@ -19,7 +22,7 @@ export class ContainerComponent implements OnInit {
       .subscribe(response => {
         this.cryptos = response;
         console.log(response)
-      })
+    });
   }
 
 }
