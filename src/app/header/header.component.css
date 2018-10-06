@@ -1,0 +1,10 @@
+div.header-container {
+    display: "block";
+    margin-top: 55px;
+    text-align: center;
+}
+
+span.header {
+    font-weight: bold;        
+    font-size: 20px;
+}
